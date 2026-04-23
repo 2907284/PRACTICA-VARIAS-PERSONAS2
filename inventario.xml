@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="inventario.xsl"?>
+
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="inventario.xsd">
+    <dispositivo>
+        <id>1</id>
+        <tipo>Router</tipo>
+        <marca>Cisco</marca>
+        <modelo>ISR 4331</modelo>
+        <precio>1200.00</precio>
+    </dispositivo>
+
+    <dispositivo>
+        <id>2</id>
+        <tipo>Router</tipo>
+        <marca>MikroTik</marca>
+        <modelo>RB4011</modelo>
+        <precio>350.00</precio>
+    </dispositivo>
+
+    <dispositivo>
+        <id>3</id>
+        <tipo>Switch</tipo>
+        <marca>HP</marca>
+        <modelo>Aruba 2930F</modelo>
+        <precio>890.00</precio>
+    </dispositivo>
+
+    <dispositivo>
+        <id>4</id>
+        <tipo>Switch</tipo>
+        <marca>Netgear</marca>
+        <modelo>GS728TP</modelo>
+        <precio>420.00</precio>
+    </dispositivo>
+
+    <dispositivo>
+        <id>5</id>
+        <tipo>Servidor</tipo>
+        <marca>Dell</marca>
+        <modelo>PowerEdge R750</modelo>
+        <precio>5400.00</precio>
+    </dispositivo>
+
+    <dispositivo>
+        <id>6</id>
+        <tipo>Servidor</tipo>
+        <marca>HPE</marca>
+        <modelo>ProLiant DL380 Gen10</modelo>
+        <precio>6100.00</precio>
+    </dispositivo>
+</inventario>

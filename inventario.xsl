@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" encoding="UTF-8" indent="yes"/>
     <xsl:template match="/">
         <html>
             <head>
-                <title>Esquema XSD del Inventario</title>
+                <title>Inventario de Hardware</title>
                 <style>
                     body {
                         font-family: Arial, sans-serif;
-                        margin: 20px;
+                        background-color: #f4f4f4;
                     }
                     h2 {
                         text-align: center;
+                        color: #333333;
                     }
                     table {
                         border-collapse: collapse;
-                        width: 70%;
+                        width: 80%;
                         margin: 20px auto;
+                        background-color: white;
                     }
                     th, td {
                         border: 1px solid black;
@@ -28,22 +29,28 @@
                     th {
                         background-color: #d9eaf7;
                     }
+                    tr:nth-child(even) {
+                        background-color: #f9f9f9;
+                    }
                 </style>
             </head>
             <body>
-                <h2>Estructura del esquema XSD: Inventario</h2>
+                <h2>Inventario de Dispositivos Hardware</h2>
                 <table>
                     <tr>
-                        <th>Elemento padre</th>
-                        <th>Elemento hijo</th>
+                        <th>ID</th>
                         <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Precio</th>
                     </tr>
-
-                    <xsl:for-each select="//xs:element[@name='dispositivo']//xs:element">
+                    <xsl:for-each select="inventario/dispositivo">
                         <tr>
-                            <td>dispositivo</td>
-                            <td><xsl:value-of select="@name"/></td>
-                            <td><xsl:value-of select="@type"/></td>
+                            <td><xsl:value-of select="id"/></td>
+                            <td><xsl:value-of select="tipo"/></td>
+                            <td><xsl:value-of select="marca"/></td>
+                            <td><xsl:value-of select="modelo"/></td>
+                            <td><xsl:value-of select="precio"/></td>
                         </tr>
                     </xsl:for-each>
                 </table>
